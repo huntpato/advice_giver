@@ -1,32 +1,103 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap');
+
+:root{
+  --darkBlack: #232324;
+  --grey: #555555;
+  --lightBlue: #71b1e6;
+  --white: #ececec;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html{
+  background-color: var(--darkBlack);
 }
 
-.App-header {
-  background-color: #282c34;
+body{
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+main {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+main .advice {
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: var(--grey);
+  color: var(--white);
+  padding: 50px;
+  padding-bottom: 60px;
+  margin: 25px;
+  border-radius: 20px;
+  text-align: center;
+  gap: 25px;
 }
+
+/* main .advice::after {
+  content: "";
+  height: 50px;
+  width: 100%;
+  background-image: url("../public/img/pattern-divider-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 35%;
+} */
+
+main .advice small {
+  color: var(--lightBlue);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+main .advice h2 {
+  font-size: 26px;
+  font-weight: 400;
+}
+
+main .advice .random_button {
+  display: flex;
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  bottom: -33px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 1000px;
+  background-color: var(--lightBlue);
+  cursor: pointer;
+  z-index: 200;
+
+  transition: box-shadow 0.15s ease-out;
+}
+
+main .advice .random_button:hover {
+  box-shadow: 0px 0px 15px var(--lightBlue);
+}
+
+main .advice .random_button::after {
+  content: "";
+  width: 25px;
+  height: 30px;
+  display: inline-block;
+  background-image: url("../public/img/dice-five-solid.svg");
+  background-size: 100%;
+}
+
+
 
 @keyframes App-logo-spin {
   from {
