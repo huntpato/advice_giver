@@ -40,20 +40,10 @@ main .advice {
   padding: 50px;
   padding-bottom: 60px;
   margin: 25px;
-  border-radius: 20px;
+  border-radius: 15px;
   text-align: center;
   gap: 25px;
 }
-
-/* main .advice::after {
-  content: "";
-  height: 50px;
-  width: 100%;
-  background-image: url("../public/img/pattern-divider-desktop.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: auto 35%;
-} */
 
 main .advice small {
   color: var(--lightBlue);
@@ -63,7 +53,7 @@ main .advice small {
 }
 
 main .advice h2 {
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 400;
 }
 

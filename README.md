@@ -1,4 +1,4 @@
 # Advice giver
 
-Project with typescript + Redux + Thunk 
+Redux + Thunk 
 
